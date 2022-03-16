@@ -1,0 +1,119 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url("3.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: auto;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 40px auto;
+}
+  
+.cards{
+    position: relative;
+    width:320px;
+    margin: 50px;
+    height: 450px;
+    box-shadow: inset 5px 5px 5px rgba(0,0,0,0.05),
+                inset -5px -5px 5px rgba(255,255,255,0.5),
+                -5px -5px 5px rgba(255,255,255,0.2),
+                -5px -5px 5px rgba(255,255,255,0.2);
+
+    border-radius: 15px;
+    
+}
+
+.cards .box{
+    position: absolute;
+    top:10px;
+    left: 10px;
+    right:10px;
+    bottom: 10px;
+    background: rgb(240, 240, 240);
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.cards .box .content{
+    padding: 20px;
+    text-align: center;
+}
+
+.cards .box .content h1{
+    position:absolute;
+    font-size: 8em;
+    top:-10px;
+    right:30px;
+    color:rgba(0,0,0,0.02);
+    transition: 0.5s;
+}
+
+.cards:hover .box .content h1{
+    color: rgba(0,0,0,0.1);
+}
+
+.cards .box .content h2{
+    font-weight: bolder;
+    font-size: 2.5em;
+    color:rgba(51, 47, 47, 0.746);
+    z-index: 1;
+}
+
+.cards .box .content p{
+    color:rgba(44, 41, 41, 0.808);
+}
+
+.cards .box .content .btn{
+    border-radius: 20px;
+    padding: 8px 25px;
+    font-size: 15px;
+    background-color: rgb(42, 121, 248);
+}
+
+.cards:hover .box{
+    transform: translateY(-40px);
+    background: linear-gradient(45deg,rgb(250, 3, 188),blue);
+}
+
+.cards:hover .box h2{
+    color:white;
+}
+
+.cards:hover .box p{
+    color:white;
+}
+
+.cards:hover .box .btn{
+    background-color: rgb(233, 35, 68);
+    border: none;
+}
+
+.info{
+    width: 40%;
+    background-color: rgb(255, 7, 7);
+    margin:auto;
+    height: 50px;
+    padding: 10px 0px;
+    text-align: center;
+}
+
+@media only screen and (max-width:600px){
+    .info{
+        height: auto;
+    }
+}
